@@ -1,0 +1,46 @@
+[
+  {
+    "path": "/th/systemtrade",
+    "children": [
+      {
+      "path": ":revenue/fx",
+      "newPath": [
+        ":revenue(profitrate|profit|profitfactor|riskreturn|sell)/fx/(p)?/:p(\\d+)?"
+        ]
+      },
+      {
+        "path": "newproduct/fx",
+        "newPath": "newproduct/fx/(p)?/:p(\\d+)?"
+      },
+      {
+        "path": "realasset",
+        "newPath": "realasset/(p)?/:p(\\d+)?"
+      }
+    ]
+  },
+  {
+    "path": "/th/info",
+    "children": [
+      {
+        "path": "",
+        "newPath": [
+          ":type(seller|partner)",
+          ":type(seller|partner)/y/:y(\\d+)?/(p)?/:p(\\d+)?/(t)?/:t(1|2|1,2|1%2C2|2,1|2%2C1)?",
+          "y/:y(\\d+)?/(p)?/:p(\\d+)?/(t)?/:t(1|2|1,2|1%2C2|2,1|2%2C1)?"
+        ]
+      },
+      {
+        "path": ":id",
+        "newPath":":type(seller|partner)/:id"
+      }
+    ]
+  },
+  {
+    "path": "/th/tools/indicators/new",
+    "newPath": "(p)?/:p(\\d+)?"
+  },
+  {
+    "path": "/th/tools/indicators",
+    "newPath": "p/:p(\\d+)"
+  }
+]

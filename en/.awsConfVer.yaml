@@ -1,0 +1,10 @@
+serviceConfVersion: 1
+commonConfVersion: 4
+serviceNumberDeployment:
+  local: 29
+  staging: 20
+  production: 3
+commonNumberDeployment:
+  local: 64
+  staging: 61
+  production: 13

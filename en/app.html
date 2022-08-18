@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html {{ HTML_ATTRS }}>
+<head {{ HEAD_ATTRS }}>
+  <script>
+    var agent = navigator.userAgent || '';
+    (window.IntersectionObserver && !~agent.indexOf('Chrome-Lighthouse') && !~agent.indexOf('Googlebot')) || document.write('<script src="https://polyfill.io/v2/polyfill.min.js?features=IntersectionObserver"><\/script>')
+  </script>
+  {{ HEAD }}
+</head>
+<body {{ BODY_ATTRS }}>
+{{ APP }}
+<noscript>This website requires JavaScript.</noscript>
+<!-- Google Tag Manager (noscript) -->
+<noscript>
+  <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5SRZZSL"
+          height="0" width="0" style="display:none;visibility:hidden"></iframe>
+</noscript>
+<!-- End Google Tag Manager (noscript) -->
+</body>
+</html>

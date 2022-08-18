@@ -1,0 +1,11 @@
+.inner-chart {
+  /deep/ .highcharts-container {
+    overflow: visible !important;
+    svg {
+      overflow: visible !important;
+    }
+    hr {
+      margin: 0 !important;
+    }
+  }
+}

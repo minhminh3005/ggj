@@ -1,0 +1,1 @@
+## finance/navi/... will be used desktop version (applied responsive). Not using this codebase anymore

@@ -1,0 +1,3 @@
+*.scss
+nuxt.config.js
+/app/router.js

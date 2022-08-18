@@ -1,0 +1,11 @@
+# hidden files
+.*
+**/node_modules
+*.md
+# redundant directory
+boilerplate
+bk
+# document component
+styleguide
+**/docs
+**/localization

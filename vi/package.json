@@ -1,0 +1,51 @@
+{
+  "name": "gg.sf.vi",
+  "version": "1.0.0",
+  "description": "GoGoJungle VN FX project",
+  "author": "Nguyen Trong Hieu <nguyentronghieu@gogojungle.vn>",
+  "private": true,
+  "main": "index.js",
+  "engines": {
+    "node": "10.16.0"
+  },
+  "scripts": {
+    "build:staging": "$NVM_DIR/versions/node/v$npm_package_engines_node/lib/node_modules/yarn/bin/yarn build:lang:staging && nuxt build --config-file nuxt.config.js",
+    "build:prod": "$NVM_DIR/versions/node/v$npm_package_engines_node/lib/node_modules/yarn/bin/yarn build:lang:prod && nuxt build --config-file nuxt.config.js",
+    "build:lang:win": "%NVM_HOME%/v%npm_package_engines_node%/node ../bin/google-sheet.js",
+    "build:lang:staging": "$NVM_DIR/versions/node/v$npm_package_engines_node/bin/node ../bin/google-sheet.js",
+    "build:lang:prod": "$NVM_DIR/versions/node/v$npm_package_engines_node/bin/node ../bin/google-sheet.js prod",
+    "build:analyze": "ANALYZE=true nuxt build --config-file nuxt.config.js",
+    "prestart": "cd .. && %NVM_HOME%/v%npm_package_engines_node%/yarn && cd ./vi && %NVM_HOME%/v%npm_package_engines_node%/yarn",
+    "start": "%NVM_HOME%/v%npm_package_engines_node%/yarn build:lang:win && nodemon . --watch index.js --max-old-space-size=4096",
+    "prepm2": "cd .. && $NVM_DIR/versions/node/v$npm_package_engines_node/lib/node_modules/yarn/bin/yarn && cd ./vi && $NVM_DIR/versions/node/v$npm_package_engines_node/lib/node_modules/yarn/bin/yarn",
+    "pm2": "pm2 start ecosystem.config.js",
+    "lint": "eslint --ext .js,.vue --ignore-path ../.gitignore --fix .",
+    "aws": "node .",
+    "aws:build": "node ../bin/google-sheet.js && nuxt build --config-file nuxt.config.js"
+  },
+  "dependencies": {
+    "@fullcalendar/core": "^4.3.1",
+    "@fullcalendar/daygrid": "^4.3.0",
+    "@nuxtjs/style-resources": "^1.0.0",
+    "axios": "^0.19.0",
+    "bootstrap": "3.3.7",
+    "highcharts": "^6.1.1",
+    "is-retry-allowed": "^1.1.0",
+    "jquery": "^3.2.1",
+    "jquery.dotdotdot": "^3.2.3",
+    "nuxt": "^2.0.0",
+    "owl.carousel": "^2.3.4",
+    "parse-gitignore": "^1.0.1",
+    "vue": "^2.6.10",
+    "vue-i18n": "^8.14.0",
+    "core-js": "3",
+    "node-sass": "^4.12.0",
+    "sass-loader": "^7.2.0"
+  },
+  "devDependencies": {
+    "@babel/runtime-corejs3": "^7.5.5",
+    "nodemon": "^1.18.9",
+    "less": "^4.1.2",
+    "less-loader": "^4.1.0"
+  }
+}

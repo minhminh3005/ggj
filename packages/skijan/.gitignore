@@ -1,0 +1,13 @@
+# # next.js
+/.next/
+/out/
+
+# typescript
+*.tsbuildinfo
+
+# OS generated:
+lang/
+localization/
+
+components/layouts/common/menu-data.json
+components/layouts/common/menu-data-extend.json

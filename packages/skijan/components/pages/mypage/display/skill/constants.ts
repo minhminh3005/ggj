@@ -1,0 +1,1 @@
+export const nsDisplaySkill = 'mypage@displayskill'

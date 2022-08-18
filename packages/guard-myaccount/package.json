@@ -1,0 +1,60 @@
+{
+  "name": "gogo.guard.myaccount",
+  "version": "1.0.0",
+  "description": "Guard for myaccount",
+  "main": "index.js",
+  "author": "chan nguyen",
+  "private": true,
+  "engines": {
+    "node": "14.18.0"
+  },
+  "scripts": {
+    "prebuild": "npx rimraf dist",
+    "build": "nest build",
+    "prestart": "npx rimraf dist",
+    "start": "node ../../run-script-os",
+    "start:windows": "%NVM_HOME%/v%npm_package_engines_node%/yarn && nest start --watch",
+    "start:default": "$NVM_DIR/versions/node/v$npm_package_engines_node/bin/yarn && nest start --watch",
+    "aws": "node dist/main",
+    "aws:build": "nest build",
+    "lint:js": "eslint --fix"
+  },
+  "dependencies": {
+    "@ggj/configs": "1.1.3",
+    "@ggj/utils": "1.1.9",
+    "@nestjs/axios": "^0.0.6",
+    "@nestjs/common": "^8.4.0",
+    "@nestjs/core": "^8.4.0",
+    "@nestjs/platform-express": "^8.4.0",
+    "@nestjs/swagger": "^5.2.0",
+    "@nestjs/typeorm": "^8.0.3",
+    "cacheman-memory": "^1.1.0",
+    "compression": "^1.7.4",
+    "cookie-parser": "^1.4.6",
+    "helmet": "^5.1.0",
+    "http-proxy-middleware": "^2.0.4",
+    "jsonwebtoken": "^8.5.1",
+    "morgan": "^1.10.0",
+    "rxjs": "^7.5.4",
+    "swagger-ui-express": "^4.3.0",
+    "typeorm": "^0.2.44"
+  },
+  "devDependencies": {
+    "@nestjs/cli": "^8.2.1",
+    "@nestjs/schematics": "^8.0.7",
+    "@types/cookie-parser": "^1.4.2",
+    "@types/express": "^4.17.13",
+    "@types/faker": "^6.6.9",
+    "@types/node": "^17.0.21",
+    "@typescript-eslint/eslint-plugin": "^5.0.0",
+    "@typescript-eslint/parser": "^5.0.0",
+    "eslint": "^8.0.1",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "prettier": "^2.3.2",
+    "ts-loader": "^9.2.7",
+    "ts-node": "^10.6.0",
+    "tsconfig-paths": "^3.12.0",
+    "typescript": "^4.6.2"
+  }
+}

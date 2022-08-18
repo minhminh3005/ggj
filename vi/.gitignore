@@ -1,0 +1,12 @@
+# Nuxt build
+.nuxt*
+logs/
+.env*
+!.env.example
+### Node template
+# Logs
+logs
+
+# OS generated:
+lang/
+localization/
